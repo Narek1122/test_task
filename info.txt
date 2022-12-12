@@ -1,0 +1,49 @@
+
+установка фреймворка - 2 min
+конфигурация ngnix - 3 min
+установка laravel passport и конфигурация -10 min
+
+task 1 - 15 min,
+task 2 - 20 min,
+task 3 - 30 min,
+
+
+php artisan auth:login {login} {password} example john 123456 // get token
+
+
+/api/post // get user posts
+method: 'GET',
+headers: {
+'Content-Type': 'application/json',
+'Accept': 'application/json',
+'Authorization': `Bearer ${token}`
+},
+
+/api/post // store new post
+method: 'POST',
+headers: {
+'Content-Type': 'application/json',
+'Accept': 'application/json',
+'Authorization': `Bearer ${token}`
+},
+body: JSON.stringify({name:'someValue'})
+
+/api/post/{id} // update post by id // id must be post id
+method: 'PATCH',
+headers: {
+'Content-Type': 'application/json',
+'Accept': 'application/json',
+'Authorization': `Bearer ${token}`
+},
+body: JSON.stringify({name:'someValue'})
+
+/api/post/{id} // delete post by id // id must be post id
+method: 'DELTE',
+headers: {
+'Content-Type': 'application/json',
+'Accept': 'application/json',
+'Authorization': `Bearer ${token}`
+},
+
+
+
